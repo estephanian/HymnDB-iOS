@@ -45,7 +45,6 @@
 		A25BD6432087BAB700C8F98B /* HymnDBFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25BD6422087BAB700C8F98B /* HymnDBFinalTests.swift */; };
 		A25BD64B2087BD7D00C8F98B /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25BD64A2087BD7D00C8F98B /* ApiHelper.swift */; };
 		A26C53B12087C388002ACFC4 /* ResourceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26C53B02087C388002ACFC4 /* ResourceList.storyboard */; };
-		A26C53B32087C39F002ACFC4 /* ResoureListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C53B22087C39F002ACFC4 /* ResoureListTableViewController.swift */; };
 		A26C53B52087C3B3002ACFC4 /* ResourceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C53B42087C3B3002ACFC4 /* ResourceListTableViewCell.swift */; };
 		A26C53B82087CAAA002ACFC4 /* MaterialComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26C53B72087CAAA002ACFC4 /* MaterialComponents.framework */; };
 		A26C53BA2088DADF002ACFC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26C53B92088DADF002ACFC4 /* Alamofire.framework */; };
@@ -134,7 +133,6 @@
 		A25BD6442087BAB700C8F98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25BD64A2087BD7D00C8F98B /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		A26C53B02087C388002ACFC4 /* ResourceList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourceList.storyboard; sourceTree = "<group>"; };
-		A26C53B22087C39F002ACFC4 /* ResoureListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResoureListTableViewController.swift; sourceTree = "<group>"; };
 		A26C53B42087C3B3002ACFC4 /* ResourceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListTableViewCell.swift; sourceTree = "<group>"; };
 		A26C53B72087CAAA002ACFC4 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C53B92088DADF002ACFC4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,7 +320,6 @@
 				02AAD4232092F8A700C72EF3 /* DisplayResourceTableCell.swift */,
 				02AAD425209377F900C72EF3 /* DisplayResourceDetailViewController.swift */,
 				A26C53B02087C388002ACFC4 /* ResourceList.storyboard */,
-				A26C53B22087C39F002ACFC4 /* ResoureListTableViewController.swift */,
 				A26C53B42087C3B3002ACFC4 /* ResourceListTableViewCell.swift */,
 				A2E6CE182090C8BA005E988C /* ResourceListViewController.swift */,
 			);
@@ -639,7 +636,6 @@
 				02AAD426209377F900C72EF3 /* DisplayResourceDetailViewController.swift in Sources */,
 				16971419206A994B0056BDA0 /* Quiz6ViewController.swift in Sources */,
 				1697141F206A9A370056BDA0 /* Question6.swift in Sources */,
-				A26C53B32087C39F002ACFC4 /* ResoureListTableViewController.swift in Sources */,
 				16971407206A92960056BDA0 /* Quiz2ViewController.swift in Sources */,
 				16971421206A9A500056BDA0 /* Question7.swift in Sources */,
 				02AAD4242092F8A700C72EF3 /* DisplayResourceTableCell.swift in Sources */,

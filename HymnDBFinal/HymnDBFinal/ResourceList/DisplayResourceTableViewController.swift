@@ -18,12 +18,18 @@ class DisplayResourceTableViewController: UITableViewController {
     var resourceList:JSON = []
     
     var category:Int! = 0
-    var url = "http://ec2-34-209-251-224.us-west-2.compute.amazonaws.com:3000/resource/approved/type/"
+    var noQuizUrl = "http://ec2-34-209-251-224.us-west-2.compute.amazonaws.com:3000/resource/approved/type/"
+    var quizUrl = "http://ec2-34-209-251-224.us-west-2.compute.amazonaws.com:3000/quiz/resource/"
     var quizDict: [String:Any] = [:]
     var isQuiz:Bool = false
 
     
     override func viewDidLoad() {
+        var url = noQuizUrl
+        if(isQuiz)
+        {
+            url = quizUrl
+        }
         
         switch category{
         case 0:
@@ -53,15 +59,31 @@ class DisplayResourceTableViewController: UITableViewController {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-
-        Alamofire.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                self.resourceList = JSON(value)
-                print(self.resourceList.count)
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
+        
+        //Not a quiz
+        if(!isQuiz){
+            Alamofire.request(url, method: .get).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    self.resourceList = JSON(value)
+                    print(self.resourceList.count)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        else
+        {
+            Alamofire.request(url, method: .post, parameters: quizDict, encoding: JSONEncoding.default).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    self.resourceList = JSON(value)
+                    print(self.resourceList.count)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print(error)
+                }
             }
         }
         self.tableView.reloadData()

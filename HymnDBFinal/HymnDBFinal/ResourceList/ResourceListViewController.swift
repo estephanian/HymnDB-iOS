@@ -20,6 +20,7 @@ class ResourceListViewController: UIViewController {
     var resourceList:JSON = []
     var catToPush:Int = 0
     var quizDict: [String:Any] = [:]
+    var quizDone:Bool = false;
     
     @IBOutlet weak var cardView: AnimatableView!
 //    @IBOutlet weak var resourceImage: AnimatableImageView!
@@ -165,6 +166,8 @@ class ResourceListViewController: UIViewController {
      
         self.title = "Browse Resources"
         
+        print("Was quiz taken: " + String(quizDone))
+        
         resourceList = [
             ["resourceTitle": "Books",
              "resourceImage": "https://s3-us-west-2.amazonaws.com/hymndbphotos/books-education-school-literature-48126.jpg",
@@ -242,6 +245,11 @@ class ResourceListViewController: UIViewController {
             }
 
             listView.category = catToPush
+            if(quizDone)
+            {
+                listView.isQuiz = true
+                listView.quizDict = quizDict
+            }
             
         default: break
             

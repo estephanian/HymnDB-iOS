@@ -19,7 +19,7 @@ class Quiz7ViewController: UITableViewController {
     private var quizItems = mySize().getMockData()
     private var questionTitle = ["On average, how many people attend your weekly worship services"]
     var quizDict: [String:Any] = [:]
-    
+    var wrapDict: [String:Any] = [:]
     @IBAction func resultsPressed(_ sender: Any)
     {
         var toAdd:Dictionary = [String:Bool]()
@@ -28,12 +28,10 @@ class Quiz7ViewController: UITableViewController {
             toAdd[x.title] = true
         }
         quizDict["size"] = toAdd
-        var wrapDict: [String:Any] = [:]
         wrapDict["quiz"] = quizDict
         
-        print(JSON(wrapDict))
         
-        //performSegue(withIdentifier: "nextPage", sender: nil)
+        performSegue(withIdentifier: "nextPage", sender: nil)
     }
    
     
@@ -118,11 +116,17 @@ class Quiz7ViewController: UITableViewController {
         switch(segue.identifier ?? "") {
             
         case "nextPage":
-            guard let QuizViewController = segue.destination as? Quiz6ViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
+//            guard let listView = segue.destination as? ResourceListViewController else {
+//                fatalError("Unexpected destination: \(segue.destination)")
+//            }
             
-            QuizViewController.quizDict = quizDict
+            let navVC = segue.destination as? UINavigationController
+            
+            let listView = navVC?.viewControllers.first as! ResourceListViewController
+
+            
+            listView.quizDict = wrapDict
+            listView.quizDone = true
             
         default: break
             
