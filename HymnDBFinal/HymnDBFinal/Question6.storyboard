@@ -44,6 +44,9 @@
                                     <state key="normal" title="Next">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="nextPressed:" destination="2NS-Am-LB6" eventType="touchUpInside" id="Pe3-BO-sOG"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

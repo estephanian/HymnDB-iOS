@@ -7,13 +7,7 @@
 //
 
 import Foundation
-//
-//  QuizViewController.swift
-//  HymnDBFinal
-//
-//  Created by Adrien Ibarra on 3/22/18.
-//  Copyright © 2018 Adrien Ibarra. All rights reserved.
-//
+import SwiftyJSON
 
 import UIKit
 
@@ -26,23 +20,22 @@ class Quiz7ViewController: UITableViewController {
     private var questionTitle = ["On average, how many people attend your weekly worship services"]
     var quizDict: [String:Any] = [:]
     
-    
-    @IBAction func hit_result(_ sender: Any) {
+    @IBAction func resultsPressed(_ sender: Any)
+    {
+        var toAdd:Dictionary = [String:Bool]()
+        let test = mySize().getCheckedData()
+        for x in test{
+            toAdd[x.title] = true
+        }
+        quizDict["size"] = toAdd
+        var wrapDict: [String:Any] = [:]
+        wrapDict["quiz"] = quizDict
         
-        let storyboard = UIStoryboard(name: "ResourceList", bundle: nil).instantiateInitialViewController()
-        present(storyboard!, animated: true, completion: nil)
-        /*let vc = ResourceListTableViewController(nibName: "ResourceListTableViewController", bundle: nil)
-         vc.titleText = "dsf"
-         navigationController?.pushViewController(vc, animated: true)*/
-        var myDict: [String: [Quiz]] = [:]
-        myDict["category"] =  myCategories().getCheckedData()
-        myDict["instrument"] = myInstruments().getCheckedData()
-        myDict["ensemble"] = myEnsembles().getCheckedData()
-        myDict["shape"] = myShape().getCheckedData()
-        myDict["clothing"] = myClothing().getCheckedData()
-        myDict["ethnicitys"] = myEthnicities().getCheckedData()
-        myDict["size"] = mySize().getCheckedData()
+        print(JSON(wrapDict))
+        
+        //performSegue(withIdentifier: "nextPage", sender: nil)
     }
+   
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -116,6 +109,24 @@ class Quiz7ViewController: UITableViewController {
         previous.layer.borderColor = UIColor(white: 0.5, alpha: 0.7).cgColor
         previous.layer.cornerRadius = 10
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "nextPage":
+            guard let QuizViewController = segue.destination as? Quiz6ViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            QuizViewController.quizDict = quizDict
+            
+        default: break
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

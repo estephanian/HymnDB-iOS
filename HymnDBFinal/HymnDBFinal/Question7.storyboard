@@ -44,6 +44,9 @@
                                     <state key="normal" title="Results">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="resultsPressed:" destination="uyI-lc-dft" eventType="touchUpInside" id="x4l-Xf-ahF"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

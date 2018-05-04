@@ -34,7 +34,7 @@ class myEnsembles
         {
             
             quizs3.append(Quiz(title: "Choir"))
-            quizs3.append(Quiz(title: "Cantor)"))
+            quizs3.append(Quiz(title: "Cantor"))
             quizs3.append(Quiz(title: "Song-Enlivener"))
             quizs3.append(Quiz(title: "Lead Singer from Band (solo)"))
             quizs3.append(Quiz(title: "Lead Singer from Band with Other Vocalists"))

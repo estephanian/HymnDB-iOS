@@ -39,7 +39,7 @@ class myInstruments
         {
             
             quizs2.append(Quiz(title: "Acapella"))
-            quizs2.append(Quiz(title: "Organ)"))
+            quizs2.append(Quiz(title: "Organ"))
             quizs2.append(Quiz(title: "Piano"))
             quizs2.append(Quiz(title: "Guitar (not full band)"))
             quizs2.append(Quiz(title: "Band (guitar, bass, drums, etc..."))

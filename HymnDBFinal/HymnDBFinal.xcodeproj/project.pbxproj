@@ -371,8 +371,8 @@
 				1697140E206A95D20056BDA0 /* Question3.storyboard */,
 				16971414206A97460056BDA0 /* Question4.storyboard */,
 				16971422206A9B610056BDA0 /* Question5.storyboard */,
-				16971426206A9B730056BDA0 /* Question7.storyboard */,
 				16971424206A9B6A0056BDA0 /* Question6.storyboard */,
+				16971426206A9B730056BDA0 /* Question7.storyboard */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";

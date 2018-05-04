@@ -26,6 +26,19 @@ class Quiz6ViewController: UITableViewController {
     private var questionTitle = ["What ethnicities/races make up at least 20% of your congregation"]
     var quizDict: [String:Any] = [:]
     
+    @IBAction func nextPressed(_ sender: Any)
+    {
+        var toAdd:Dictionary = [String:Bool]()
+        let test = myEthnicities().getCheckedData()
+        for x in test{
+            toAdd[x.title] = true
+        }
+        quizDict["ethnicities"] = toAdd
+        
+        performSegue(withIdentifier: "nextPage", sender: nil)
+    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -98,6 +111,24 @@ class Quiz6ViewController: UITableViewController {
         previous.layer.borderColor = UIColor(white: 0.5, alpha: 0.7).cgColor
         previous.layer.cornerRadius = 10
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "nextPage":
+            guard let QuizViewController = segue.destination as? Quiz7ViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            QuizViewController.quizDict = quizDict
+            
+        default: break
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

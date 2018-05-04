@@ -7,21 +7,24 @@
 //
 
 import Foundation
-//
-//  QuizViewController.swift
-//  HymnDBFinal
-//
-//  Created by Adrien Ibarra on 3/22/18.
-//  Copyright © 2018 Adrien Ibarra. All rights reserved.
-//
 
 import UIKit
 
 class Quiz2ViewController: UITableViewController {
     
     @IBOutlet weak var previous: UIButton!
-    
     @IBOutlet weak var nextButton: UIButton!
+    @IBAction func nextButton(_ sender: Any)
+    {
+        var toAdd:Dictionary = [String:Bool]()
+        let test = myInstruments().getCheckedData()
+        for x in test{
+            toAdd[x.title] = true
+        }
+        quizDict["instruments"] = toAdd
+        
+        performSegue(withIdentifier: "nextPage", sender: nil)
+    }
     private var quizItems = myInstruments().getMockData()
     private var questionTitle = ["What instrumental leadership do you have available?"]
     var quizDict: [String:Any] = [:]
@@ -98,6 +101,24 @@ class Quiz2ViewController: UITableViewController {
         previous.layer.borderColor = UIColor(white: 0.5, alpha: 0.7).cgColor
         previous.layer.cornerRadius = 10
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        
+        case "nextPage":
+            guard let QuizViewController = segue.destination as? Quiz3ViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            QuizViewController.quizDict = quizDict
+            
+        default: break
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

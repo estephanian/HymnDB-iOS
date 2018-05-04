@@ -44,6 +44,9 @@
                                     <state key="normal" title="Next">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="nextPressed:" destination="3mG-Lh-HMT" eventType="touchUpInside" id="2cI-zv-LPE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +77,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Pk1-FG-6Ku"/>
                     <connections>
-                        <outlet property="nextButton" destination="DS6-Ww-CYb" id="RZE-Zy-NeH"/>
+                        <outlet property="nextButton" destination="DS6-Ww-CYb" id="spS-MF-MuM"/>
                         <outlet property="previous" destination="lhZ-VN-u53" id="0DP-fe-0xZ"/>
                         <segue destination="Shr-TM-88L" kind="show" identifier="nextPage" id="n7h-0M-oUj"/>
                     </connections>

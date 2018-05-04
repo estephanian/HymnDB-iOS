@@ -8,20 +8,6 @@
 
 import Foundation
 var quizs7 = [Quiz]()
-/*class size
- {
- var title: String
- var done: Bool
- 
- public init(title: String)
- {
- self.title = title
- self.done = false
- }
- public func status_switch(){
- self.done = !self.done
- }
- }*/
 class mySize
 {
     public init()
@@ -29,9 +15,11 @@ class mySize
         if(quizs7.count == 0)
         {
             
-            quizs7.append(Quiz(title: "5-Fold Pattern (Gathering, Word, Response, Table, Sending) - Roman Catholic Mass and similar structures"))
-            quizs7.append(Quiz(title: "4-Fold Pattern (Gathering, Word, Response, Sending) - Communion monthly or quarterly"))
-            quizs7.append(Quiz(title: "2-Fold Pattern (Praise & Teaching) - Most Praise and Worship services"))
+            quizs7.append(Quiz(title: "Under 100"))
+            quizs7.append(Quiz(title: "Between 100 and 250"))
+            quizs7.append(Quiz(title: "Between 250 and 500"))
+            quizs7.append(Quiz(title: "Between 500 and 1000"))
+            quizs7.append(Quiz(title: "Over 1000"))
         }
     }
     public func getMockData() -> [Quiz]
