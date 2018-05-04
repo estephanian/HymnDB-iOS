@@ -15,6 +15,7 @@ class DisplayResourceDetailViewController: UIViewController
 {
     var toDisplay:JSON = []
     let url = "http://ec2-34-209-251-224.us-west-2.compute.amazonaws.com:3000/resource"
+    var likePressed = false;
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -39,6 +40,15 @@ class DisplayResourceDetailViewController: UIViewController
     }
     @IBAction func likeButtonPressed(_ sender: Any)
     {
+        if (!likePressed)
+        {
+            let toPOST = url + "/addLike/" + String (toDisplay["id"].int!)
+            Alamofire.request(toPOST, method: .post)
+            toDisplay["likes"].int = toDisplay["likes"].int! + 1
+            let likesStr = String (toDisplay["likes"].int!)
+            likesLabel.text = "Likes: " + likesStr
+            likePressed = true
+        }
         
     }
     @IBAction func visitButtonPressed(_ sender: Any)
