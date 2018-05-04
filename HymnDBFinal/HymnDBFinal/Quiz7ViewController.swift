@@ -24,6 +24,7 @@ class Quiz7ViewController: UITableViewController {
     @IBOutlet weak var nextButton: UIButton!
     private var quizItems = mySize().getMockData()
     private var questionTitle = ["On average, how many people attend your weekly worship services"]
+    var quizDict: [String:Any] = [:]
     
     
     @IBAction func hit_result(_ sender: Any) {

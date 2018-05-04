@@ -19,6 +19,7 @@ class ResourceListViewController: UIViewController {
 
     var resourceList:JSON = []
     var catToPush:Int = 0
+    var quizDict: [String:Any] = [:]
     
     @IBOutlet weak var cardView: AnimatableView!
 //    @IBOutlet weak var resourceImage: AnimatableImageView!

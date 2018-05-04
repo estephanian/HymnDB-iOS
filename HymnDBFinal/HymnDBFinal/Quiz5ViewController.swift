@@ -24,6 +24,7 @@ class Quiz5ViewController: UITableViewController {
     @IBOutlet weak var nextButton: UIButton!
     private var quizItems = myClothing().getMockData()
     private var questionTitle = ["What does your pastor/priest wear when they preach"]
+    var quizDict: [String:Any] = [:]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

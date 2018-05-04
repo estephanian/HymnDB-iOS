@@ -24,6 +24,7 @@ class Quiz4ViewController: UITableViewController {
     @IBOutlet weak var nextButton: UIButton!
     private var quizItems = myShape().getMockData()
     private var questionTitle = ["What best describes the shape of your worship?"]
+    var quizDict: [String:Any] = [:]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

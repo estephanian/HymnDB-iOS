@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e2d-sw-yLX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VIV-Zh-byQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,9 +52,6 @@
                                     <state key="normal" title="Next">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
-                                    <connections>
-                                        <segue destination="mQt-JW-IXC" kind="show" id="O41-b8-EMl"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,11 +84,12 @@
                     <connections>
                         <outlet property="nextButton" destination="Yqt-5Z-b7c" id="HVp-YB-V8p"/>
                         <outlet property="previous" destination="OjK-mC-EeC" id="kKr-pE-sJC"/>
+                        <segue destination="mQt-JW-IXC" kind="show" identifier="nextPage" id="eg3-xk-jEY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHx-ZB-mv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908" y="883.80809595202402"/>
+            <point key="canvasLocation" x="1822" y="847"/>
         </scene>
         <!--Question5-->
         <scene sceneID="gPI-ly-FdL">
@@ -117,7 +115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7al-Zl-KEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="884"/>
+            <point key="canvasLocation" x="807" y="847"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,7 @@ class Quiz3ViewController: UITableViewController {
     @IBOutlet weak var nextButton: UIButton!
     private var quizItems = myEnsembles().getMockData()
     private var questionTitle = ["What vocal leadership do you have available?"]
+    var quizDict: [String:Any] = [:]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

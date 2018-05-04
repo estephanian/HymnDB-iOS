@@ -24,6 +24,7 @@ class Quiz6ViewController: UITableViewController {
     @IBOutlet weak var nextButton: UIButton!
     private var quizItems = myEthnicities().getMockData()
     private var questionTitle = ["What ethnicities/races make up at least 20% of your congregation"]
+    var quizDict: [String:Any] = [:]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

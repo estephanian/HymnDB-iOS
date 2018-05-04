@@ -18,8 +18,8 @@ class DisplayResourceTableViewController: UITableViewController {
     var resourceList:JSON = []
     
     var category:Int! = 0
-    
     var url = "http://ec2-34-209-251-224.us-west-2.compute.amazonaws.com:3000/resource/approved/type/"
+    var quizDict: [String:Any] = [:]
 
     
     override func viewDidLoad() {

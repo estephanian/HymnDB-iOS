@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class QuizViewController: UITableViewController {
     
     @IBOutlet weak var previous: UIButton!
-    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var home: UIButton!
+    
+    var quizDict: [String:Any] = [:]
+    
+    @IBAction func nextPressed(_ sender: Any)
+    {
+        var toAdd:Dictionary = [String:Bool]()
+        let test = myCategories().getCheckedData()
+        for x in test{
+            toAdd[x.title] = true
+        }
+        quizDict["categories"] = toAdd
+        
+        performSegue(withIdentifier: "nextPage", sender: nil)
+    }
     
     private var quizItems = myCategories().getMockData()
     private var questionTitle = ["Which types of song/hymn(s) has your congregation sung recently?"]
@@ -96,6 +110,25 @@ class QuizViewController: UITableViewController {
         home.backgroundColor = UIColor.white
         home.layer.borderColor = UIColor(white: 0.5, alpha: 0.7).cgColor
         home.layer.cornerRadius = 10
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+            
+        case "nextPage":
+            guard let QuizViewController = segue.destination as? Quiz2ViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+
+            QuizViewController.quizDict = quizDict
+            
+        default: break
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
