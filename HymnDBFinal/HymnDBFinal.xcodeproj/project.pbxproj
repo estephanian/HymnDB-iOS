@@ -58,13 +58,7 @@
 		A26C53CA2088DADF002ACFC4 /* MotionTransitioning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26C53C92088DADF002ACFC4 /* MotionTransitioning.framework */; };
 		A26C53CC2088DADF002ACFC4 /* PDFReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26C53CB2088DADF002ACFC4 /* PDFReader.framework */; };
 		A26C53CE2088DADF002ACFC4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26C53CD2088DADF002ACFC4 /* SwiftyJSON.framework */; };
-		A2C521202090BDBE007D9FC7 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5211F2090BDBE007D9FC7 /* ResourceTableViewCell.swift */; };
-		A2C521222090BDD6007D9FC7 /* ResourceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C521212090BDD6007D9FC7 /* ResourceView.storyboard */; };
-		A2E6CE122090BF88005E988C /* SelectedResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6CE112090BF88005E988C /* SelectedResourceTableViewCell.swift */; };
-		A2E6CE142090BFB0005E988C /* SelectedResourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6CE132090BFB0005E988C /* SelectedResourceTableViewController.swift */; };
-		A2E6CE162090BFC0005E988C /* SelectedResource.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E6CE152090BFC0005E988C /* SelectedResource.storyboard */; };
 		A2E6CE192090C8BA005E988C /* ResourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6CE182090C8BA005E988C /* ResourceListViewController.swift */; };
-		A2F90630207D245F00AA9695 /* ResourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9062F207D245F00AA9695 /* ResourceTableViewController.swift */; };
 		AA32FAFE255B93DD0BD05D18 /* Pods_HymnDBFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58170751AB524F53D48B5848 /* Pods_HymnDBFinal.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,13 +141,7 @@
 		A26C53CB2088DADF002ACFC4 /* PDFReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PDFReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C53CD2088DADF002ACFC4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C53D0208E583C002ACFC4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/estephanian/Desktop/HymnDB/HymnDBFinal/HymnDBFinal/Extensions.swift; sourceTree = "<absolute>"; };
-		A2C5211F2090BDBE007D9FC7 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
-		A2C521212090BDD6007D9FC7 /* ResourceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourceView.storyboard; sourceTree = "<group>"; };
-		A2E6CE112090BF88005E988C /* SelectedResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedResourceTableViewCell.swift; sourceTree = "<group>"; };
-		A2E6CE132090BFB0005E988C /* SelectedResourceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedResourceTableViewController.swift; sourceTree = "<group>"; };
-		A2E6CE152090BFC0005E988C /* SelectedResource.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedResource.storyboard; sourceTree = "<group>"; };
 		A2E6CE182090C8BA005E988C /* ResourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListViewController.swift; sourceTree = "<group>"; };
-		A2F9062F207D245F00AA9695 /* ResourceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewController.swift; sourceTree = "<group>"; };
 		D0311F60C0CF299BFDC9B9F1 /* Pods_HymnDBFinalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HymnDBFinalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68F178283D30EBF154BF053 /* Pods-HymnDBFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HymnDBFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HymnDBFinal/Pods-HymnDBFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		DDBF7C8303B9667039054514 /* Pods-HymnDBFinalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HymnDBFinalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HymnDBFinalUITests/Pods-HymnDBFinalUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,9 +237,7 @@
 			children = (
 				A26C53D0208E583C002ACFC4 /* Extensions.swift */,
 				164EF100203CF37E000B9C30 /* AppDelegate.swift */,
-				A2E6CE172090BFCC005E988C /* SelectedResource */,
 				A2F9062A207D170B00AA9695 /* Quiz */,
-				A2C521232090BDDD007D9FC7 /* ResourceView */,
 				A26C53CF208E5757002ACFC4 /* ResourceList */,
 				164EF102203CF37E000B9C30 /* ViewController.swift */,
 				164EF114203D08EB000B9C30 /* ResourceViewController.swift */,
@@ -324,26 +310,6 @@
 				A2E6CE182090C8BA005E988C /* ResourceListViewController.swift */,
 			);
 			path = ResourceList;
-			sourceTree = "<group>";
-		};
-		A2C521232090BDDD007D9FC7 /* ResourceView */ = {
-			isa = PBXGroup;
-			children = (
-				A2F9062F207D245F00AA9695 /* ResourceTableViewController.swift */,
-				A2C521212090BDD6007D9FC7 /* ResourceView.storyboard */,
-				A2C5211F2090BDBE007D9FC7 /* ResourceTableViewCell.swift */,
-			);
-			path = ResourceView;
-			sourceTree = "<group>";
-		};
-		A2E6CE172090BFCC005E988C /* SelectedResource */ = {
-			isa = PBXGroup;
-			children = (
-				A2E6CE132090BFB0005E988C /* SelectedResourceTableViewController.swift */,
-				A2E6CE152090BFC0005E988C /* SelectedResource.storyboard */,
-				A2E6CE112090BF88005E988C /* SelectedResourceTableViewCell.swift */,
-			);
-			path = SelectedResource;
 			sourceTree = "<group>";
 		};
 		A2F9062A207D170B00AA9695 /* Quiz */ = {
@@ -485,7 +451,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C521222090BDD6007D9FC7 /* ResourceView.storyboard in Resources */,
 				16971427206A9B730056BDA0 /* Question7.storyboard in Resources */,
 				164EF10B203CF37E000B9C30 /* LaunchScreen.storyboard in Resources */,
 				16E02BD02055F76D00122249 /* Choices.storyboard in Resources */,
@@ -494,7 +459,6 @@
 				1697140F206A95D20056BDA0 /* Question3.storyboard in Resources */,
 				A26C53B12087C388002ACFC4 /* ResourceList.storyboard in Resources */,
 				16971423206A9B610056BDA0 /* Question5.storyboard in Resources */,
-				A2E6CE162090BFC0005E988C /* SelectedResource.storyboard in Resources */,
 				16971415206A97460056BDA0 /* Question4.storyboard in Resources */,
 				16971425206A9B6A0056BDA0 /* Question6.storyboard in Resources */,
 				164EF108203CF37E000B9C30 /* Assets.xcassets in Resources */,
@@ -622,7 +586,6 @@
 			files = (
 				164EF103203CF37E000B9C30 /* ViewController.swift in Sources */,
 				A26C53B52087C3B3002ACFC4 /* ResourceListTableViewCell.swift in Sources */,
-				A2E6CE122090BF88005E988C /* SelectedResourceTableViewCell.swift in Sources */,
 				1697141B206A995C0056BDA0 /* Quiz7ViewController.swift in Sources */,
 				A25BD62C2087B54D00C8F98B /* HomeViewController.swift in Sources */,
 				1697141D206A9A2F0056BDA0 /* Question5.swift in Sources */,
@@ -630,7 +593,6 @@
 				16971417206A993B0056BDA0 /* Quiz5ViewController.swift in Sources */,
 				A2E6CE192090C8BA005E988C /* ResourceListViewController.swift in Sources */,
 				16971413206A96E10056BDA0 /* Question4.swift in Sources */,
-				A2C521202090BDBE007D9FC7 /* ResourceTableViewCell.swift in Sources */,
 				1658F2D52064A6670090F9F6 /* QuizViewController.swift in Sources */,
 				16971409206A92E90056BDA0 /* Question2.swift in Sources */,
 				02AAD426209377F900C72EF3 /* DisplayResourceDetailViewController.swift in Sources */,
@@ -640,10 +602,8 @@
 				16971421206A9A500056BDA0 /* Question7.swift in Sources */,
 				02AAD4242092F8A700C72EF3 /* DisplayResourceTableCell.swift in Sources */,
 				02C421F92092AB2500B57786 /* DisplayResourceTableViewController.swift in Sources */,
-				A2E6CE142090BFB0005E988C /* SelectedResourceTableViewController.swift in Sources */,
 				16971411206A96AF0056BDA0 /* Quiz4ViewController.swift in Sources */,
 				1658F2D32064A4700090F9F6 /* Quiz.swift in Sources */,
-				A2F90630207D245F00AA9695 /* ResourceTableViewController.swift in Sources */,
 				164EF101203CF37E000B9C30 /* AppDelegate.swift in Sources */,
 				1697140D206A95610056BDA0 /* Question3.swift in Sources */,
 				164EF115203D08EB000B9C30 /* ResourceViewController.swift in Sources */,
